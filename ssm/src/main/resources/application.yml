@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/myproject
+    username: root
+    password: 200518
+  ai:
+    zhipuai:
+      api-key: 4a3109e9438244e997fa7f86cd00ae8b.a1me0UD7TirFQyiR
+      base-url: https://open.bigmodel.cn/api/paas
+      chat:
+        memory:
+          repository:
+            jdbc:
+              initialize-schema: always
+        options:
+          model: GLM-4.5-Flash
+
+#GLM-4.7-Flash
+#  spring.ai.chat.memory.repository.jdbc.initialize-schema=embedded # Only for embedded DBs (default)
+#  spring.ai.chat.memory.repository.jdbc.initialize-schema=always   # Always initialize
+#  spring.ai.chat.memory.repository.jdbc.initialize-schema=never    # Never initialize (useful with Flyway/Liquibase)
+
+enterprise:
+  name: springboot-demo
+  url: https://github.com
+  username: zhangsan
+  password: 123456
+
+
